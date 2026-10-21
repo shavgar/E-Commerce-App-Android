@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header2"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp">
+
+    <LinearLayout
+        android:id="@+id/activity_sign_in_linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <EditText
+            android:id="@+id/activity_sign_in_email"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="12dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@color/lineColor"
+            android:textColorHint="@color/white2"
+            android:textSize="20sp" />
+
+        <View
+            style="@style/viewsDevider"
+            android:layout_height="1dp" />
+
+        <EditText
+            android:id="@+id/activity_sign_in_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="12dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@color/lineColor"
+            android:textColorHint="@color/white2"
+            android:textSize="20sp" />
+
+        <View
+            style="@style/viewsDevider"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/activity_sign_in_signin_button"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_circle_orange"
+            android:clickable="true"
+            android:fontFamily="sans-serif-black"
+            android:padding="16dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#EEEEEB"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_sign_facebook_auth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/facebook" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_sign_google_auth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/google" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_sign_twitter_auth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/twitter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_sign_in_linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Don't have an account?"
+                android:textColor="@color/lightOrange"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/activity_sign_in_signup_text"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="3dp"
+                android:text="@string/underlined_signup"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_sign_in_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/underlined_forgot_password"
+        android:textColor="@color/lightOrange" />
+
+    <ProgressBar
+        android:id="@+id/activity_sign_in_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="303dp"
+        android:visibility="gone" />
+</RelativeLayout>

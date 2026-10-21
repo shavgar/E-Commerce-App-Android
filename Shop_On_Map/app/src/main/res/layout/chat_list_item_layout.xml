@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/chat_list_item_parent_relativelayout"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_list_item_profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/profile_image" />
+
+        <TextView
+            android:id="@+id/chat_list_item_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/chat_list_item_profile_image"
+            android:text="User Name"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/chat_list_item_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_list_item_username"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/chat_list_item_profile_image"
+            android:text="message"
+            android:textSize="13dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <View style="@style/viewsDevider"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

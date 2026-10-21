@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_new_post_parent_ralativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_circle_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_new_post_toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:id="@+id/activity_new_post_main_content_scrollview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_new_post_toolbar"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/activity_new_post_Linearlayout1"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_circle_white"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@drawable/ic_circle_white">
+                <ImageView
+                    android:id="@+id/activity_new_post_product_image"
+                    android:layout_width="340dp"
+                    android:layout_height="240dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_new_post" />
+
+            </RelativeLayout>
+
+
+
+            <View
+                style="@style/viewsDevider"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/activity_new_post_type"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/activity_new_post_product_image"
+                    android:layout_weight="2"
+                    android:background="@drawable/ic_circle_lightgray"
+                    android:hint="Type"
+                    android:inputType="textCapWords"
+                    android:maxLength="80"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/lineColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/activity_new_post_price"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_circle_lightgray"
+                    android:gravity="right"
+                    android:hint="$ Price"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingRight="10dp"
+                    android:textColor="#58DD05"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/viewsDevider"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_circle_lightgray">
+
+                <EditText
+                    android:id="@+id/activity_new_post_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Description"
+                    android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+                    android:paddingLeft="12dp"
+                    android:textSize="15sp" />
+            </ScrollView>
+
+            <Switch
+                android:id="@+id/activity_setup_profile_switch_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:checked="false"
+                android:drawableLeft="@drawable/ic_phone_orange"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Allow people to call me"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:textSize="20dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/activity_new_post_bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/activity_new_post_post_button"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_circle_green"
+                    android:clickable="true"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="5dp"
+                    android:text="Post"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/activity_new_post_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

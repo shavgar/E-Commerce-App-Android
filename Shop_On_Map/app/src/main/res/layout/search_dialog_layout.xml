@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/search_dialog_layout_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show posts within radius of "
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/search_dialog_layout_distance"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/ic_circle_lightgray"
+        android:hint="e.g 100"
+        android:inputType="number"
+        android:maxWidth="90dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="metre"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

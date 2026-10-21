@@ -1,0 +1,201 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#FAF7F7"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/cardview_item_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cardview_image"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:src="@drawable/add_new_post" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/cardview_image"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/cardview_title"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@drawable/ic_circle_lightgray"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:text="Title"
+                android:textColor="#C61A677E"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardview_price"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_circle_lightgray"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:text="Price"
+                android:textColor="#58DD05"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_edit_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_circle_lightgray"
+                android:padding="3dp"
+                android:src="@drawable/edit_post_icon"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_delete_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_circle_lightgray"
+                android:padding="3dp"
+                android:src="@drawable/delete_post_icon"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewsDevider"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/cardview_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_circle_lightgray"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            android:text="Description"
+            android:textColor="@color/lineColor"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom">
+
+            <View
+                style="@style/viewsDevider"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_user_image"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:src="@drawable/profile_image" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_like_button"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/dislike" />
+
+            <TextView
+                android:id="@+id/cardview_likes_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cardview_like_button"
+                android:text="0"
+                android:textColor="@color/lineColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/cardview_username"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/cardview_user_image"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="User Name"
+                android:textColor="@color/lineColor"
+                android:textSize="15sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_phone_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toLeftOf="@id/cardview_chat_button"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_circle_lightgreen"
+                android:padding="5dp"
+                android:src="@drawable/ic_phone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cardview_chat_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_circle_lightgreen"
+                android:padding="5dp"
+                android:src="@drawable/ic_white_message" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <!--
+    <View
+    style="@style/viewsDevider"
+    android:layout_height="1dp" />
+
+    <TextView
+    android:id="@+id/cardview_description"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:paddingLeft="10dp"
+    android:background="@android:color/transparent"
+    android:text="Description"
+    android:textSize="15sp" />-->

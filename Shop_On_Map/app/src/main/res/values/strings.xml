@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">myMap</string>
+    <string name="title_activity_maps">myMap</string>
+    <string name="google_maps_api_key">API-KEY</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="underlined_signup"><u>Register</u></string>
+    <string name="underlined_signin"><u>Login</u></string>
+    <string name="underlined_forgot_password"><u>Forgot Password</u></string>
+
+    <!--New Code-->
+    <string name="intent_user_list">intent_user_list</string>
+</resources>
